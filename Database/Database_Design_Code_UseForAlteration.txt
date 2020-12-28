@@ -1,0 +1,44 @@
+Account_Info
+--
+CustomerId int pk
+UserId  string
+Password password
+
+Customer_Details
+--
+CustomerId int fk >- Account_Info.CustomerId
+First_Name string 
+Last_Name string 
+Age int 
+
+Car
+--
+CarId int pk
+Model_Name string
+Model_Year string 
+Color string 
+Car_Type ENUM("Sedan","Hatchback","Luxury")
+Transmission_Type ENUM("Automatic","Manual")
+Seats int
+Min_Age int
+Mileage int
+Gas_Charges ENUM("Included","Not Included")
+Fuel_Type ENUM("Petrol","Deisel")
+Picture_image
+Booked ENUM(YES,NO)
+Price_Per_Day
+
+Booking
+--
+CustomerId int pk fk >- Account_Info.CustomerId 
+CarId int pk fk >- Car.CarId
+Start_Date Date
+End_Date Date
+Use ENUM(Travel,Day-To-Day)
+Total_Price
+
+Booked
+--
+CarId pk fk >- Booking.CarId
+Start_Date Date
+End_Date Date
