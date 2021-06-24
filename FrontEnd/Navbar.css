@@ -17,8 +17,8 @@
 .header .left {
     position: relative;
     left: 10px;
-    display: inline-flex;
     align-items: center;
+    display: inline-flex;
 }
 
 .header .left span{
@@ -26,37 +26,68 @@
     left: 10px;
 }
 
-.header .right {
-    width: auto;
-    position: relative;
-    right: 10px;
-}
-
 .header .left img{
     border-radius: 50%;
     height: 60px;
 }
 
-.header .right nav ul{
-    list-style: none;
+/*Right Side*/
+
+.header nav{
+    margin-right: 10px;
 }
 
-.header .right nav ul li{
+.header nav ul{
+    list-style-type: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.header nav ul li{
     display: inline-block;
     margin: 0 5px;
 }
 
-.header .right nav ul li:hover{
+.header nav ul li:hover{
     text-decoration: underline;
     font-size: 1.1em;
     text-underline-offset: 4px;
 }
 
-.header button{
+.header nav ul li button{
     width: auto;
     padding: 6px;
     background-color: orange;
     color: #fff;
     border-radius: 7px;
     border-color: #fff;
+}
+
+nav img{
+    height: 38px;
+    display: none;
+}
+
+/*Ending Right Side*/
+
+@media screen and (max-width: 600px){
+    nav img {
+        display: block;
+        cursor: pointer;
+    }
+
+    .header nav {
+        justify-content: flex-end;
+    }
+
+    .header nav ul{
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        right: 0px;
+        background-color: #000;
+        width: 100%;
+        height: 50vh;
+        justify-content: space-around;
+    }
 }

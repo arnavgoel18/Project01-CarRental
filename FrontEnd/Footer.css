@@ -43,7 +43,7 @@
     margin-left: auto;
     height: auto;
     width: 35%;
-    background: url("Logo.png");
+    background: url("../Images/Logo.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -103,6 +103,7 @@
     }
     .row1{
         flex-direction: column;    
+        align-items: center;
     }
     .social{
         display: none;
@@ -112,8 +113,8 @@
     }
     .col2{
         margin: 2em 0;
-        border-top: solid #fff 1px;
         padding: 1em;
+        display: none;
     }
 }
 

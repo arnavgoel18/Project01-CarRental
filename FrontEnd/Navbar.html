@@ -12,17 +12,30 @@
             <img class="logo" src="/Users/arnavgoel/Documents/Projects/Project01-CarRental/Images/Logo.png"/>
             <span class="heading">A La Carte</span>
         </div>
-        <div class="right">
-            <nav>
-                <ul>
-                    <li>Our Cars</li>
-                    <li>Book</li>
-                    <li>Contact Us</li>
-                    <li>About Us</li>
-                    <li><button onclick="">Login/SignUp</button></li>
-                </ul>
-            </nav>
-        </div>
+        <nav >
+            <ul id="navbar">
+                <li>Our Cars</li>
+                <li>Book</li>
+                <li>Contact Us</li>
+                <li>About Us</li>
+                <li><button>Login/SignUp</button></li>
+            </ul>
+            <img src="../Images/hamburger-menu.png" id = "toggleButton" onclick="toggleFunction()">
+        </nav>
     </div>
+
+    <script>
+        const expandedNav = document.getElementById("navbar");
+        const toggleButton = document.getElementById("toggleButton");
+
+        function toggleFunction() {
+            if(expandedNav.style.display === "none"){
+                expandedNav.style.display = "inline-flex";
+            }
+            else {
+                expandedNav.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

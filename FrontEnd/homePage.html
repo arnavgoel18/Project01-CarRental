@@ -4,33 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>A-La-Car</title>
     <link rel="stylesheet" href="Navbar.css">
     <link rel="stylesheet" href="homePage.css">
+    <link rel="stylesheet" href="Footer.css">
 </head>
 <body>
     <div class="header">
         <div class="left">
-            <img class="logo" src="../Images/Logo.png"/>
-            <span class="heading">A - La - Car</span>
+            <img class="logo" src="/Users/arnavgoel/Documents/Projects/Project01-CarRental/Images/Logo.png"/>
+            <span class="heading">A La Carte</span>
         </div>
-        <div class="right">
-            <nav>
-                <ul>
-                    <li>Our Cars</li>
-                    <li>Book</li>
-                    <li>Contact Us</li>
-                    <li>About Us</li>
-                    <li><button onclick="">Login/SignUp</button></li>
-                </ul>
-            </nav>
-        </div>
+        <nav >
+            <ul id="navbar">
+                <li>Our Cars</li>
+                <li>Book</li>
+                <li>Contact Us</li>
+                <li>About Us</li>
+                <li><button>Login/SignUp</button></li>
+            </ul>
+            <img src="../Images/hamburger-menu.png" id = "toggleButton" onclick="toggleFunction()">
+        </nav>
     </div>
 
+    <script>
+        const expandedNav = document.getElementById("navbar");
+        const toggleButton = document.getElementById("toggleButton");
+
+        function toggleFunction() {
+            if(expandedNav.style.display === "none"){
+                expandedNav.style.display = "inline-flex";
+            }
+            else {
+                expandedNav.style.display = "none";
+            }
+        }
+        
+    </script>
+    <!--Actual Code to Render For HomePage. Rest all HTML Code can be imported using a component and React-->
     <div id="main">
         <img src="../Images/Logo.png" alt="">
         <span>A - La - Car</span>
         <button>Book Now</button>
+    </div>
+    <!--End Here-->
+    <div class="footer">
+        <div class="row1">  
+            <div class="col1">
+                <ul class="pages">
+                    <li><i class="fa fa-shopping-cart" aria-hidden="true"></i> Our cars</li>
+                    <li><i class="fa fa-bookmark" aria-hidden="true"></i> Booking Page</li>
+                    <li><i class="fa fa-phone-square" aria-hidden="true"></i> Contact Us</li>
+                    <li><i class="fa fa-info-circle" aria-hidden="true"></i> Know More</li>
+                    <li><i class="fa fa-sign-in" aria-hidden="true"></i> Login/Sign Up</li>
+                </ul>
+            </div>
+            <div class="col2">
+                <ul class="developers">    <!--Names-->
+                    <li>Arnav Goel  
+                        <ul class="devLinks">
+                            <li><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                                <a href="https://www.linkedin.com/in/arnav-goel-ba94a21ab/">LinkedIn</a></li>   <!--Linked In-->
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                                <a href="mailto:arnav18.goel@gmail.com">Email </a></li>   <!--Mail-->
+                            <li><i class="fa fa-github-square" aria-hidden="true"></i>
+                                <a href="https://github.com/arnavgoel18">GitHub</a></li>   <!--Git-->
+                        </ul>
+                    </li>
+                    <li>Saloni Vij
+                        <ul class="devLinks">
+                            <li><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                                <a href="https://www.linkedin.com/in/saloni-vij-8210211b2/">LinkedIn</a></li>   <!--Linked In-->
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i>
+                                <a href="">Email</a></li>   <!--Mail-->
+                            <li><i class="fa fa-github-square" aria-hidden="true"></i>
+                                <a href="">GitHub</a></li>   <!--Git-->
+                        </ul>
+                    </li>
+                </ul>   <!--End Names-->
+            </div>  <!--ENd Footer Col2-->
+            <div class="col3"></div>
+        </div>
+    </div>
+    <div class="copyright">  <!--Row 2-->
+        <span class="copy">
+            <i class="fa fa-copyright" aria-hidden="true"></i> Copyright A-La-Cart November 2020
+        </span>
+        <span class="social">
+            <a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a>   <!--AddLinks-->
+            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>   <!--AddLinks-->
+        </span>
     </div>
 </body>
 </html>
