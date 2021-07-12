@@ -1,15 +1,29 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Axios from 'axios'
 
-const Login=()=>{
+const Signup=()=>{
     const [firstName, setFirstName]=useState('')
     const [lastName, setLastName]=useState('')
     const [age, setAge]=useState('')
     const [userNameReg, setUserNameReg]= useState('')
     const [passwordReg, setPasswordReg]= useState('')
+    const register=(e)=>{
+        e.preventDefault();
+        Axios.post("http://localhost:3001/register" , {
+            firstName:firstName,
+            lastName:lastName,
+            age:age,
+            userNameReg:userNameReg,
+            passwordReg:passwordReg
+        }).then((response)=>{
+            console.log(response)
+            return response
+        })
+    }
 
     return(
-        <div id='login'>    
-            <form>
+        <div id='form'>    
+            <form onSubmit={register} action="http://localhost:3001/register" method="POST">
                 <div>
                     <label>Firstname </label>
                     <input 
@@ -60,10 +74,10 @@ const Login=()=>{
                         onChange={(event) => setPasswordReg(event.target.value)}
                     />
                 </div>
-
+                <button type='submit'>Signup</button>
             </form>
         </div>
     )
 }
 
-export default Login
+export default Signup
