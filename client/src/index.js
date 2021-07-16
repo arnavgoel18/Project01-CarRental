@@ -1,18 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import App from './App'
 
-import Footer from './components/Footer/Footer'
-import Navbar from './components/Navbar/Navbar'
-import HomePage from './containers/HomePage/HomePage'
-
-function Page(){
-    return (
-        <>
-            <Navbar />
-            <HomePage/>
-            <Footer />
-        </>
-    );
-}
-
-ReactDOM.render(<Page/>, document.getElementById('root'));
+ReactDOM.render(<App/>, document.getElementById('root'));
