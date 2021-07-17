@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contactus-heading{
+    text-align: center;
+    padding-bottom: 2%;
+    margin: 20px 0;
+}
+.contactus-heading h2{
+    font-size: 36px;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+.contactus-container{
+    position: relative;
+    align-items: center;
+    display: flex;
+    padding-top: 1%;
+    padding-bottom: 5%;
+}
+.contactinfo{
+    position: relative;
+    top: 40px;
+    width: 250px;
+    margin-left: 100px;
+    height: calc(100%-100px);
+    background: black;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+}
+.contactinfo h2{
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+}
+.info{
+    position: relative;
+    margin: 20px 0;
+}
+.box{
+    position: relative;
+    padding-left:30px;
+    padding-top: 20px;
+    display: flex;
+    color: white;
+}
+.box:hover{
+    color: darkorange;
+}
+.icon{
+    min-width: 30px;
+    height: 60px;
+    display: float;
+    justify-content: center;
+    align-items: center; 
+}
+.contactform{
+    position: absolute;
+    width: 60%;
+    margin-left: 250px;
+    margin-top: 50px;
+    padding-left: 250px;
+    height: 95%;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+} 
+.contactform h2{
+    padding-top:10px ;
+    font-size: 30px;
+    font-weight: 700;
+}
+.formbox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap ;
+    padding-top: 40px;
+}
+.inputbox, .sinputbox {
+    position: relative;
+    margin: 0 0 35px 0;
+    border: none;
+    width: 50%;
+}
+.tinputbox{
+    width: 100%;
+    position: relative;
+    margin: 0 0 45px 0;
+    border: none;
+    padding-right: 100px;
+}
+.inputbox input{
+    width: 50%;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+ .tinputbox textarea{
+    resize: none;
+    min-height: 20px;
+    width:100%;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+ .sinputbox input {
+    width:100%;
+    font-size: 18px;
+    font-weight: 300;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    background: white;
+}
+.inputbox span,.tinputbox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.tinputbox textarea:focus ~span, .inputbox input:focus ~span, .inputbox input:valid ~span
+{
+    transform: translateY(-20px);  
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.sinputbox input {
+    position: relative;
+    cursor: pointer;
+    background: black;
+    color: cornsilk;
+    max-width: 150px;
+    padding: 12px;
+}
