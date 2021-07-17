@@ -1,14 +1,14 @@
-.heading{
+.contactus-heading{
     text-align: center;
     padding-bottom: 2%;
     margin: 20px 0;
 }
-.heading h2{
+.contactus-heading h2{
     font-size: 36px;
     padding-bottom: 1%;
     padding-top: 1%;
 }
-.container{
+.contactus-container{
     position: relative;
     align-items: center;
     display: flex;
