@@ -3,11 +3,14 @@ const mysql= require('mysql'); //install mysql
 const dotenv=require('dotenv'); //install dotenv
 const cors=require('cors'); //install cors
 
-const perm=require('./perm'); //get the perm middleware
-
+const perm=require('./middlewares/perm'); //get the perm middleware
 
 const app=express(); // start server
-app.use(cors({ credentials: true })) //setup cors
+app.use(cors({  
+    credentials: true,
+    origin: ["http://localhost:3000"],
+    methods: ["GET", "POST"] 
+})) //setup cors
 dotenv.config({path: './.env'}); //path for the env file
 app.use(express.json()); //values are in json format  
 app.use(perm)
@@ -29,7 +32,6 @@ db.connect((error) => { //to actually connect, if you have made any error above,
 })
 
 app.use('/', require('./routes/auth'));
-
 
 app.listen("3001", ()=>{
     console.log("Server started on port 3001");

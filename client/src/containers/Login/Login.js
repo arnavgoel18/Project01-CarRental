@@ -1,10 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Axios from 'axios'
 
 const Login=()=>{
     const [userid, setUserid]= useState('')
     const [password, setPassword]= useState('')
     const [loginStatus, setLoginStatus]=useState('')
+
+    Axios.defaults.withCredentials=true
 
     const login=(e)=>{
         e.preventDefault();
@@ -16,6 +18,7 @@ const Login=()=>{
                 setLoginStatus(response.data.message)
             }
             else{
+                sessionStorage.setItem("accessToken", response.data)
                 setLoginStatus(response.data[0].userid)
             }
             console.log(response.data)
@@ -23,6 +26,8 @@ const Login=()=>{
         }).catch(error => console.log(error));
     }
 
+
+    
     return(
         <div id='form'>    
             <form onSubmit={login} action="http://localhost:3001/login" method="POST">

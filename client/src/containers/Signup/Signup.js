@@ -7,6 +7,7 @@ const Signup=()=>{
     const [age, setAge]=useState('')
     const [userNameReg, setUserNameReg]= useState('')
     const [passwordReg, setPasswordReg]= useState('')
+    Axios.defaults.withCredentials=true
     const register=(e)=>{
         e.preventDefault();
         Axios.post("http://localhost:3001/register" , {
