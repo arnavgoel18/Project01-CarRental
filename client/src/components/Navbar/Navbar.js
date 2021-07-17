@@ -22,8 +22,8 @@ function Navbar() {
         <div>
             <div className="header">
                 <div className="left">
-                    <img className="logo" src={logo} alt = "logo"/>
-                    <span className="heading">A La Carte</span>
+                    <img className="nav-logo" src={logo} alt = "logo"/>
+                    <span className="">A La Carte</span>
                 </div>
                 <nav >
                     <ul id="navbar">
