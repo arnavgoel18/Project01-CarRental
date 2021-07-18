@@ -1,4 +1,4 @@
-const car = {
+export const car = {
     modelName: 'Mahindra Scorpio',
     carColor: 'Red',
     seats: 5,
