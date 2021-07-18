@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #000;;
+}
+
+.bookCard-container{
+    height: 25vh;
+    background: #ccc;
+    color: #000;
+    display: flex;
+    padding: .9rem;
+    border-radius: 10px;
+}
+
+.cols{
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    line-height: 2rem;
+    padding: 0 20px;
+}
+
+.bookCard-container .col1{
+    /* border: solid red .5px; */
+    margin-left: 20px;
+    line-height: 1.7rem;
+    text-align: center;
+    font-size: 1.2em;
+    color: #000;
+}
+
+.bookCard-container .col2{
+    /* border: solid green .5px; */
+    font-size: 1rem;
+}
+
+.bookCard-container .col3{
+    /* border: solid blue .5px; */
+}
+
+.bookCard-container .col4{
+    /* border: solid purple .5px; */
+    text-align: center;
+}
+
+.bookCard-container ul {
+    list-style-type: none;
+}
+
+.bookCard-container img{
+    height: 150px;
+    width: 270px;
+}
+
+.bookCard-container .col2 ul li, .bookCard-container .col3 ul li{
+    border: solid #333 .5px;
+    border-radius: 10px;
+    background: #fff;
+    padding: 0 5px;
+    color: #000;
+    margin: 2px 0;
+    font-size: 0.95rem;
+}
+
+.bookCard-container .col4 .btn{
+    background: green;
+    padding: 4px 7px;
+    border: solid #000 1px;
+    border-radius: 4px;
+}
