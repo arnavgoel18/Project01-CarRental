@@ -43,7 +43,7 @@
     margin-left: auto;
     height: auto;
     width: 35%;
-    background: url("/Users/arnavgoel/Documents/Projects/Project01-CarRental/client/src/assets/Logo.png");
+    background: url("../../assets/Logo.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -1,16 +1,16 @@
 import React, {useState, useEffect} from 'react'
-import { AuthContext } from "../../helpers/AuthContext";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
 import './Navbar.css'
-import hamburger from '../../assets/hamburger-menu.png'
-import logo from '../../assets/Logo.png'
 import axios from 'axios';
 
+import { AuthContext } from "../../helpers/AuthContext";
 import Home from '../../containers/HomePage/HomePage'
 import Book from '../../containers/HomePage/HomePage'
 import User from '../../containers/User/Login'
 import About from '../../containers/AboutUs/AboutUs'
 import Contact from '../../containers/ContactUs/ContactUs'
+import hamburger from '../../assets/hamburger-menu.png'
+import logo from '../../assets/Logo.png'
 
 
 function Navbar() {
@@ -70,13 +70,13 @@ function Navbar() {
                     <Router>
                         <nav >
                             <ul id="navbar">
-                                <li><Link to='/home'>Home</Link></li>
-                                <li><Link to='/book'>Book a car</Link></li>
-                                <li><Link to='/contactus'>Contact Us</Link></li>
-                                <li><Link to='/aboutus'>About Us</Link></li>
+                                <Link to='/home'><li>Home</li></Link>
+                                <Link to='/book'><li>Book a car</li></Link>
+                                <Link to='/contactus'><li>Contact Us</li></Link>
+                                <Link to='/aboutus'><li>About Us</li></Link>
                                 {!authState.status && (
                                     <>
-                                    <li><Link to="/user"> Login/Signup</Link></li>
+                                    <li><Link to="/user"><button> Login/Signup</button></Link></li>
                                     </>
                                 )}
                                 <div className="loggedInContainer">
