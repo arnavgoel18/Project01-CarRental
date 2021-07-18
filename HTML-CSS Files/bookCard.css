@@ -9,6 +9,7 @@ body{
 }
 
 .bookCard-container{
+    width: 60%;
     height: 25vh;
     background: #ccc;
     color: #000;
