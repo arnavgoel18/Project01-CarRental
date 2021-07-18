@@ -43,7 +43,7 @@
     align-items: center;
 }
 
-.header nav ul li {
+.header nav ul li, h1 {
     display: inline-block;
     margin: 0 5px;
     color: white

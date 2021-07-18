@@ -1,10 +1,12 @@
 import React from 'react'
-import Contact from './containers/ContactUs/ContactUs';
-
+import Navbar from './components/Navbar/Navbar'
+import User from './containers/User/Index'
 function App() {
   return (
     <>
-      <Contact />
+      <Navbar />
+      
+      <User />
     </>
   );
 }

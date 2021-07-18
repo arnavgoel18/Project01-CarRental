@@ -30,13 +30,12 @@ function Navbar() {
 
     const [authState, setAuthState] = useState({
         username: "",
-        id: 0,
         status: false,
       });
 
     useEffect(() => {
         axios
-          .get("http://localhost:3001/auth/auth", {
+          .get("http://localhost:3001/auth", {
             headers: {
               accessToken: localStorage.getItem("accessToken"),
             },
@@ -47,17 +46,22 @@ function Navbar() {
             } else {
               setAuthState({
                 username: response.data.username,
-                id: response.data.id,
                 status: true,
               });
             }
           });
     }, []);
     
-    const logout = () => {
-        localStorage.removeItem("accessToken");
-        setAuthState({ username: "", id: 0, status: false });
-    };
+     const logout = (e) => {
+        e.preventDefault();
+        setAuthState({ username: "", status: false });
+        try {
+            axios.get('http://localhost:3001/logout')
+            //localStorage.removeItem('accessToken')
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     return (
         <div>
@@ -80,8 +84,7 @@ function Navbar() {
                                     </>
                                 )}
                                 <div className="loggedInContainer">
-                                <h1>{authState.username} </h1>
-                                {authState.status && <button onClick={logout}> Logout</button>}
+                                {authState.status && <li><button onClick={logout}> Logout</button></li>}
                                 </div>
                             </ul>
                             <img src={hamburger} id = "toggleButton" onClick = {toggleFunction} alt = "salsa"/>
