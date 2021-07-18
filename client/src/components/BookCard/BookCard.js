@@ -11,16 +11,16 @@ import { GiJoystick } from 'react-icons/gi'
 import { VscSymbolColor } from 'react-icons/vsc'
 
 //data import
-
+import {data} from './data.js'
 
 function BookCard() {
     return (
         <React.Fragment>
             <div className="bookCard-container">
                 <div className="col1">
-                    <img src={pic} alt=""/>
+                    <img src={pic} alt="Car Picture"/>
                     <ul>
-                        <li id="color-model"> Mahindra Scorpio</li>
+                        <li id="color-model">{data.modelName}</li>
                     </ul>
                 </div>
                 <div className="col2 cols">
