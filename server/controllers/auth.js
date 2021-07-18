@@ -1,5 +1,6 @@
 const mysql= require('mysql');
 const bcrypt= require('bcryptjs');
+const jwt=require('jsonwebtoken') //install jwt
 
 
 const db= mysql.createConnection({ //start db with default stuff
@@ -9,6 +10,7 @@ const db= mysql.createConnection({ //start db with default stuff
     database: process.env.DB
 });
 
+//setting up the registering system
 exports.register= async(req,res)=>{
     const {firstName, lastName, age, userNameReg, passwordReg}=req.body
     
@@ -38,11 +40,11 @@ exports.register= async(req,res)=>{
     })
 }
 
+//setting up the login authentication
 exports.login= (req,res)=>{
     const userid=req.body.userid
     const password=req.body.password
 
-    
     db.query('SELECT * FROM account_info WHERE userid=?',[userid],
      async (error, result)=>{
         if(error){
@@ -50,9 +52,16 @@ exports.login= (req,res)=>{
         }
         else{
             if(result.length>0){
-                await bcrypt.compare(password, result[0].password, (err, response)=>{
+                await bcrypt.compare(password, result[0].password, (err, response)=>{   
                     if(response){
-                        res.send(result)
+                        const accessToken=jwt.sign({userid:userid}, 'projectwork')
+                        const cookieOptions={
+                            expires: new Date(Date.now()+24*60*60*1000),
+                            httpOnly: true
+                        }        
+                        res.cookie('jwt', accessToken, cookieOptions);
+                        res.send(accessToken)
+                        //res.send(result)
                     }
                     else{
                         res.send({message: 'Wrong credentials'})

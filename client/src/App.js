@@ -10,3 +10,5 @@ function App() {
 }
 
 export default App;
+
+//Saloni: You can delete lines 2 and 7 
