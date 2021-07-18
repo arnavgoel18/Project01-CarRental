@@ -116,7 +116,7 @@
     outline: none;
     border-bottom: 1px solid black;
 }
- .sinputbox input {
+ .sinputbox button {
     width:100%;
     font-size: 18px;
     font-weight: 300;
@@ -134,7 +134,7 @@
     transition: 0.3s;
     pointer-events: none;
 }
-.tinputbox textarea:focus ~span, .inputbox input:focus ~span, .inputbox input:valid ~span
+.tinputbox textarea:focus ~span, .tinputbox textarea:valid ~span, .inputbox input:focus ~span, .inputbox input:valid ~span
 {
     transform: translateY(-20px);  
     border: none;
@@ -142,7 +142,7 @@
     font-weight: 500;
     letter-spacing: 1px;
 }
-.sinputbox input {
+.sinputbox button {
     position: relative;
     cursor: pointer;
     background: black;

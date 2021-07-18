@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './Style.css'
 import Axios from 'axios'
 
 const Login=()=>{
@@ -24,6 +25,8 @@ const Login=()=>{
             console.log(response.data)
             return response
         }).catch(error => console.log(error));
+        setUserid('')
+        setPassword('')
     }
 
     return(

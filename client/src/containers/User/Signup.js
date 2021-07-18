@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './Style.css'
 import Axios from 'axios'
 
 const Signup=()=>{
@@ -20,6 +21,11 @@ const Signup=()=>{
             console.log(response)
             return response
         }).catch(error => console.log(error));
+        setFirstName('')
+        setLastName('')
+        setAge('')
+        setUserNameReg('')
+        setPasswordReg('')
     }
 
     return(

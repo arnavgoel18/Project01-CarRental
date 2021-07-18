@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Axios from 'axios'
 import './ContactUs.css'
 
-function ContactUs() {
+const ContactUs=()=> {
     const [name, setName]=useState('')
     const [email, setEmail]=useState('')
     const [city, setCity]=useState('')
@@ -22,6 +22,11 @@ function ContactUs() {
             console.log(response)
             return response
         }).catch(error => console.log(error));
+        setName('')
+        setEmail('')
+        setCity('')
+        setPhoneNo('')
+        setQuery('')
     }
 
     return (
@@ -45,7 +50,7 @@ function ContactUs() {
                             </div>
                         </div>
                         <div className="box">
-                            <div className="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                            <div className="icon"><i className="fa fa-envelope" aria-hidden="true"></i></div>
                             <div className="text">
                                 <h3>Email</h3>
                                 <p>something@gmail.com</p> {/*<!--Add details here-->*/}
@@ -62,6 +67,7 @@ function ContactUs() {
                 </div>
                 <div className="contactform">  {/*<!--Query form-->*/}
                     <h2>Send a query</h2>
+                    <form onSubmit={contact} action="http://localhost:3001/contactus" method="POST">
                     <div className="formbox">
                         <div className="inputbox">
                             <input 
@@ -74,7 +80,7 @@ function ContactUs() {
                         </div>
                         <div className="inputbox">
                             <input 
-                                type='email'
+                                type='text'
                                 id='email'
                                 name='email'
                                 value={email}
@@ -108,9 +114,10 @@ function ContactUs() {
                             <span>Ask your query</span>
                         </div>
                         <div className="sinputbox">
-                            <input type="Submit" value="Send" onSubmit={contact} action="http://localhost:3001/contactus" method="POST"/>
+                            <button type="Submit">Send</button>
                         </div>
                     </div>
+                    </form>
                 </div>   
             </div>
         </div>

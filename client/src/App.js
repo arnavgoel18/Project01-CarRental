@@ -1,10 +1,10 @@
 import React from 'react'
-import BookCard from './components/BookCard/BookCard';
+import Contact from './containers/ContactUs/ContactUs';
 
 function App() {
   return (
     <>
-      <BookCard/>
+      <Contact />
     </>
   );
 }

@@ -6,11 +6,19 @@ const db= mysql.createConnection({ //start db with default stuff
     password: process.env.PW,
     database: process.env.DB
 }); 
+db.connect((error) => { //to actually connect, if you have made any error above, will catch here
+    if(error){
+        console.log(error)
+    }
+    else{
+        console.log("Connected to MYSQL")
+    } 
+})
 
 exports.contactus=async(req,res)=>{
     const {name, email, city, phoneNo, query}=req.body
 
-    db.query( db.query('INSERT INTO contact_us SET ?', {
+    db.query( db.query('INSERT INTO contactus SET ?', {
         name:name,
         email:email,
         city:city,
