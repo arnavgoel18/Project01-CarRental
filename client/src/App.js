@@ -1,5 +1,4 @@
 import React from 'react'
-
 import DisplayCars from './containers/DisplayCars/DisplayCars'
 
 function App() {

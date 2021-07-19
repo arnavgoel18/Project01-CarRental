@@ -59,7 +59,7 @@ exports.login= (req,res)=>{
                             expires: new Date(Date.now()+24*60*60*1000),
                             httpOnly: true
                         }        
-                        res.cookie('jwt', accessToken, cookieOptions);
+                        res.cookie('accessToken', accessToken, cookieOptions);
                         res.send(accessToken)
                         //res.send(result)
                     }
@@ -73,4 +73,14 @@ exports.login= (req,res)=>{
             }
         }
     })
+}
+exports.logout = async (req, res) => {
+    const cookieOptions={
+        expires: new Date(Date.now()),
+        httpOnly: true
+    }
+    res.cookie('accessToken', 'none', cookieOptions)
+    res
+        .status(200)
+        .send({ message: 'User logged out successfully' })
 }

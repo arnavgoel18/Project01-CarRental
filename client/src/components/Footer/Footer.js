@@ -25,8 +25,8 @@ function Footer(){
                 <div className="footer-col3"></div>
             </div>
         </div>
-        <div class="copyright">  {/*<!--Row 2-->*/}
-            <span class="copy">
+        <div className="copyright">  {/*<!--Row 2-->*/}
+            <span className="copy">
                 <BiCopyright/> A-La-Cart November 2020
             </span>
             <span className="social">

@@ -1,6 +1,6 @@
 import React from 'react'
 import './HomePage.css'
-import logo from '/Users/arnavgoel/Documents/Projects/Project01-CarRental/client/src/assets/Logo.png'
+import logo from '../../assets/Logo.png'
 
 function HomePage(){
     return(
