@@ -9,7 +9,7 @@ import { AuthContext } from "../../helpers/AuthContext";
 
 function DisplayCars() {
     const authState  = useContext(AuthContext);
-    if(!authState.status){
+    if(!authState){
         return (
             <>
                 <NavBar/>

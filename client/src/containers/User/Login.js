@@ -3,12 +3,13 @@ import './Style.css'
 import { useHistory } from "react-router-dom";
 import Axios from 'axios'
 import {AuthContext} from '../../helpers/AuthContext'
+import NavBar from '../../components/Navbar/Navbar'
 
 const Login=()=>{
     const [userid, setUserid]= useState('')
     const [password, setPassword]= useState('')
     const [loginStatus, setLoginStatus]=useState('')
-    const  setAuthState=(useContext(AuthContext))
+    const  {changeVal}=useContext(AuthContext)
 
     let history = useHistory();
     Axios.defaults.withCredentials=true
@@ -25,10 +26,7 @@ const Login=()=>{
             else{
                 sessionStorage.setItem("accessToken", response.data)
                 setLoginStatus(response.data[0].userid)
-                setAuthState({
-                    username: response.data.userid,
-                    status: true,
-                  })
+                changeVal()
                 history.push("/");
             }
             console.log(response.data)

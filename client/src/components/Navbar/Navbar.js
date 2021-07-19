@@ -28,10 +28,7 @@ function Navbar() {
     }    
     //END - Funtion for Toggling Menu Bar in Mobile View
 
-    const [authState, setAuthState] = useState({
-        username: "",
-        status: false,
-      });
+    const [authState, setAuthState] = useState(true);
 
     useEffect(() => {
         axios
@@ -42,19 +39,20 @@ function Navbar() {
           })
           .then((response) => {
             if (response.data.error) {
-              setAuthState({ ...authState, status: false });
+              setAuthState(!authState);
             } else {
-              setAuthState({
-                username: response.data.username,
-                status: true,
-              });
+              setAuthState(!authState);
             }
           });
     }, []);
+
+    const changeVal=()=>{
+        setAuthState(!authState)
+    }
     
      const logout = (e) => {
         e.preventDefault();
-        setAuthState({ username: "", status: false });
+        setAuthState(!authState);
         try {
             axios.get('http://localhost:3001/logout')
             //localStorage.removeItem('accessToken')
@@ -70,7 +68,7 @@ function Navbar() {
                     <img className="nav-logo" src={logo} alt = "logo"/>
                     <span className="">A La Carte</span>
                 </div>
-                <AuthContext.Provider value={{ authState, setAuthState }}>
+                <AuthContext.Provider value={{ authState, changeVal }}>
                     <Router>
                         <nav >
                             <ul id="navbar">
@@ -78,13 +76,13 @@ function Navbar() {
                                 <Link to='/book'><li>Book a car</li></Link>
                                 <Link to='/contactus'><li>Contact Us</li></Link>
                                 <Link to='/aboutus'><li>About Us</li></Link>
-                                {!authState.status && (
+                                {!authState && (
                                     <>
                                     <li><Link to="/user"><button> Login/Signup</button></Link></li>
                                     </>
                                 )}
                                 <div className="loggedInContainer">
-                                {authState.status && <li><button onClick={logout}> Logout</button></li>}
+                                {authState && <li><button onClick={logout}> Logout</button></li>}
                                 </div>
                             </ul>
                             <img src={hamburger} id = "toggleButton" onClick = {toggleFunction} alt = "salsa"/>
