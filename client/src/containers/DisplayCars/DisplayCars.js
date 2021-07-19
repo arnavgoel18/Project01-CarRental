@@ -4,6 +4,7 @@ import {cars} from '../../components/BookCard/data'
 import './DisplayCars.css'
 import NavBar from '../../components/Navbar/Navbar.js'
 import Footer from '../../components/Footer/Footer.js'
+import Booking from '../Booking/Booking.js'
 
 
 function DisplayCars() {
@@ -11,11 +12,7 @@ function DisplayCars() {
         <React.Fragment>
             <NavBar/>
             <div className = 'bookCard-container-container'>
-                {cars.map((car) => {
-                    return (
-                        <BookCard key={car.id} car = {car}/>
-                    )
-                })}
+                <Booking></Booking>
             </div>
             <Footer/>
         </React.Fragment>
