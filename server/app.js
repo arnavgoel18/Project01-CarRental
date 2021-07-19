@@ -17,6 +17,7 @@ app.use(perm)
 
 app.use('/', require('./routes/auth'));
 app.use('/', require('./routes/contactus'));
+//app.use('/', require('./routes/payment'));
 
 app.listen("3001", ()=>{
     console.log("Server started on port 3001");

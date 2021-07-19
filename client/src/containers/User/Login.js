@@ -1,13 +1,16 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import './Style.css'
+import { useHistory } from "react-router-dom";
 import Axios from 'axios'
-
+import {AuthContext} from '../../helpers/AuthContext'
 
 const Login=()=>{
     const [userid, setUserid]= useState('')
     const [password, setPassword]= useState('')
     const [loginStatus, setLoginStatus]=useState('')
+    const  setAuthState=(useContext(AuthContext))
 
+    let history = useHistory();
     Axios.defaults.withCredentials=true
 
     const login=(e)=>{
@@ -22,6 +25,11 @@ const Login=()=>{
             else{
                 sessionStorage.setItem("accessToken", response.data)
                 setLoginStatus(response.data[0].userid)
+                setAuthState({
+                    username: response.data.userid,
+                    status: true,
+                  })
+                history.push("/");
             }
             console.log(response.data)
             return response

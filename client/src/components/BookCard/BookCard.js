@@ -1,5 +1,4 @@
-import React from 'react'
-
+import React, {useContext} from 'react'
 import './BookCard.css'
 
 // icons imports
@@ -11,7 +10,7 @@ import { BiRupee} from 'react-icons/bi'
 
 function BookCard(props) {    
     const {id, companyName, modelName, carColor, seats, mileage, gasCharges, fuel, carType, transmission, minAge, picture, pricePerDay} = props.car;
-    
+
     return (
         <React.Fragment>
             <div className="bookCard-container"  id={id}>
@@ -40,7 +39,7 @@ function BookCard(props) {
                 <div className="col4 cols">
                     <ul>
                         <li><BiRupee/>{pricePerDay} / Day </li>
-                        <li> <button className="btn">Book Now</button> </li>
+                        <li> <button className="btn" >Book Now</button> </li>
                         <li className="terms-and-cond"> <a href="https://www.zoomcar.com/zap-policies" target="_blank" rel="noreferrer">T&C</a> </li>
                     </ul>
                 </div>

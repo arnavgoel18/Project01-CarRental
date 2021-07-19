@@ -5,7 +5,7 @@ import Booking from './containers/Booking/Booking';
 function App() {
   return (
     <>
-      <DisplayCars/>
+      <DisplayCars />
     </>
   );
 }
