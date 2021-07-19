@@ -6,7 +6,6 @@ import App from './App'
 // import Navbar from './components/Navbar/Navbar'
 // import Footer from './components/Footer/Footer'
 
-
 ReactDOM.render(<App/>, document.getElementById('root'));
 
 // function Page(){

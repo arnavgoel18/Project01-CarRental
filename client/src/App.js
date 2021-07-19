@@ -1,10 +1,11 @@
 import React from 'react'
-import Contact from './containers/ContactUs/ContactUs';
+
+import DisplayCars from './containers/DisplayCars/DisplayCars'
 
 function App() {
   return (
     <>
-      <Contact />
+      <DisplayCars/>
     </>
   );
 }

@@ -1,7 +1,7 @@
 const cars = [
     {
         id: 1,   
-        compnayName: 'Maruti',
+        companyName: 'Maruti',
         modelName:  'Swift',
         carColor: 'Red',
         seats: 5,
@@ -16,7 +16,7 @@ const cars = [
     },
     {
         id: 2,   
-        compnayName: 'Hyundai',
+        companyName: 'Hyundai',
         modelName: 'i20',
         carColor: 'Blue',
         seats: 5,
@@ -31,7 +31,7 @@ const cars = [
     },
     {
         id: 3,   
-        compnayName: 'Tata',
+        companyName: 'Tata',
         modelName: 'Tiago',
         carColor: 'Orange',
         seats: 5,
@@ -46,7 +46,7 @@ const cars = [
     },
     {
         id: 4,   
-        compnayName: 'Maruti',
+        companyName: 'Maruti',
         modelName: 'Swift AT',
         carColor: 'Red',
         seats: 5,
@@ -61,7 +61,7 @@ const cars = [
     },
     {
         id: 5,   
-        compnayName: 'Ford',
+        companyName: 'Ford',
         modelName: 'Freestyle',
         carColor: 'Golden Brown',
         seats: 5,
@@ -76,7 +76,7 @@ const cars = [
     },
     {
         id: 6,   
-        compnayName: 'Volkswagen ',
+        companyName: 'Volkswagen ',
         modelName: 'Polo',
         carColor: 'Blue',
         seats: 5,
@@ -91,7 +91,7 @@ const cars = [
     }, 
     {
         id: 7,   
-        compnayName: 'Hyundai',
+        companyName: 'Hyundai',
         modelName: 'Verna',
         carColor: 'Black',
         seats: 5,
@@ -106,7 +106,7 @@ const cars = [
     },
     {
         id: 8,   
-        compnayName: 'Maruti',
+        companyName: 'Maruti',
         modelName: 'Ciaz',
         carColor: 'Maroon',
         seats: 5,
@@ -121,7 +121,7 @@ const cars = [
     },
     {
         id: 9,   
-        compnayName: 'Toyota',
+        companyName: 'Toyota',
         modelName: 'Glanza',
         carColor: 'Blue',
         seats: 5,
@@ -136,7 +136,7 @@ const cars = [
     },
     {
         id: 10,   
-        compnayName: 'Mahindra',
+        companyName: 'Mahindra',
         modelName: 'Scorpio',
         carColor: 'Red',
         seats: 7,
@@ -151,7 +151,7 @@ const cars = [
     },
     {
         id: 11,   
-        compnayName: 'Ford',
+        companyName: 'Ford',
         modelName: 'Ecosport',
         carColor: 'Blue',
         seats: 5,
@@ -166,7 +166,7 @@ const cars = [
     },
     {
         id: 12,   
-        compnayName: 'Mahindra',
+        companyName: 'Mahindra',
         modelName: 'XUV 500',
         carColor: 'Red',
         seats: 7,
@@ -181,7 +181,7 @@ const cars = [
     },
     {
         id: 13,   
-        compnayName: 'Hyundai',
+        companyName: 'Hyundai',
         modelName: 'Creta',
         carColor: 'Ocean',
         seats: 5,
@@ -196,7 +196,7 @@ const cars = [
     },
     {
         id: 14,   
-        compnayName: 'Tata',
+        companyName: 'Tata',
         modelName: 'Hexa',
         carColor: 'Ocean',
         seats: 7,
@@ -210,8 +210,8 @@ const cars = [
         pricePerDay: 6000
     },
     {
-        id: 14,   
-        compnayName: 'Tata',
+        id: 15,   
+        companyName: 'Tata',
         modelName: 'Nexon',
         carColor: 'Blue',
         seats: 5,
