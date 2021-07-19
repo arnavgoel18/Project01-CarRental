@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {cars} from '../../components/BookCard/data'
 import BookCard from '../../components/BookCard/BookCard.js'
+import './Booking.css'
 
 let filteredCars = cars;
 
@@ -51,10 +52,10 @@ function Booking() {
 
     return (
         <div>
-            <form name="form" >
+            <form name="form" className = "filters">
                 {/* Manufacturer */}
                 Manufacturer: 
-                <select name="manufacturer" id="manufacturer" onChange={(e) => {setManufacturer(e.target.value)}}>
+                <select name="manufacturer" id="manufacturer" onChange={(e) => {setManufacturer(e.target.value)}} className="left">
                     <option value="Select Manufacturer">Select Manufacturer</option>    
                     <option value="Maruti">Maruti</option>
                     <option value="Toyota">Toyota</option>
@@ -66,15 +67,15 @@ function Booking() {
                 </select>
                 <br/><br/>
                 {/* Seats */}
-                Seats: 
-                <select name="seats" id="seats" onChange={(e) => {setSeats(e.target.value)}}>
+                Seats:
+                <select name="seats" id="seats" onChange={(e) => {setSeats(e.target.value)}} className="right">
                     <option value="Select Seats">Select Seats</option>
                     <option value = "5">5</option>
                     <option value = "7">7</option>
                 </select><br/><br/>
                 {/* Car Type (SUV, Sedan, Hatcback) */}
                 Car Type: 
-                <select name="carType" id="carType" onChange={(e) => {setCarType(e.target.value)}}>
+                <select name="carType" id="carType" onChange={(e) => {setCarType(e.target.value)}} className="left">
                     <option value="Select Car Type">Select Car Type</option>
                     <option value = "SUV">SUV</option>
                     <option value = "Sedan">Sedan</option>
@@ -82,7 +83,7 @@ function Booking() {
                 </select><br/><br/>
                 {/* Transmission */}
                 Transmission: 
-                <select name="carType" id="carType" onChange={(e) => {setTransmission(e.target.value)}}>
+                <select name="carType" id="carType" onChange={(e) => {setTransmission(e.target.value)}} className="right">
                     <option value="Select Transmission">Select Transmission</option>
                     <option value = "Manual">Manual</option>
                     <option value = "Automatic">Automatic</option>
