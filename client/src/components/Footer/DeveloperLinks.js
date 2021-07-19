@@ -5,12 +5,14 @@ import './Footer.css'
 //developer information
 const developers = [
     {
+        id: 1,
         name: 'Arnav Goel',
         linkedin: 'https://www.linkedin.com/in/arnav-goel-ba94a21ab/',
         mail: 'mailto:arnav18.goel@gmail.com',
         github: 'https://github.com/arnavgoel18'
     },
     {
+        id: 2,
         name: 'Saloni Vij',
         linkedin: 'https://www.linkedin.com/in/saloni-vij-8210211b2/',
         mail: 'mailto:salonivij14@gmail.com',
@@ -23,8 +25,8 @@ function DeveloperLinks(){
         <ul className="developers"> 
             {developers.map((developer) => {
                 return(
-                    <li>{developer.name}
-                        <ul class="devLinks">
+                    <li key={developer.id}>{developer.name}
+                        <ul className="devLinks">
                             <li><AiOutlineLinkedin/>
                                 <a href={developer.linkedin} target="_blank" rel="noreferrer"> LinkedIn</a></li>   
                             <li><AiOutlineMail/>
