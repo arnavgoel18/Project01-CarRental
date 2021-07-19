@@ -8,15 +8,6 @@ import { GiJoystick } from 'react-icons/gi'
 import { VscSymbolColor } from 'react-icons/vsc'
 import { BiRupee} from 'react-icons/bi'
 
-//data import
-// //import an arrray here with all the possible cars returned here.
-
-// function possibleCars(){
-//     return (
-//         {}
-//     )
-// }
-
 function BookCard(props) {    
     const {id, companyName, modelName, carColor, seats, mileage, gasCharges, fuel, carType, transmission, minAge, picture, pricePerDay} = props.car;
 
@@ -26,7 +17,7 @@ function BookCard(props) {
                 <div className="col1">
                     <img src={picture} alt={modelName}/>
                     <ul>
-                        <li id="color-model">{companyName}{modelName}</li>
+                        <li id="color-model">{companyName} {modelName}</li>
                     </ul>
                 </div>
                 <div className="col2 cols">

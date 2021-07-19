@@ -76,7 +76,7 @@ const cars = [
     },
     {
         id: 6,   
-        companyName: 'Volkswagen ',
+        companyName: 'Volkswagen',
         modelName: 'Polo',
         carColor: 'Blue',
         seats: 5,
