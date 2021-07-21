@@ -6,7 +6,7 @@ import axios from 'axios';
 import { AuthContext } from "../../helpers/AuthContext";
 import Home from '../../containers/HomePage/HomePage'
 import Book from '../../containers/HomePage/HomePage'
-import User from '../../containers/User/Login'
+import User from '../../containers/User/Index'
 import About from '../../containers/AboutUs/AboutUs'
 import Contact from '../../containers/ContactUs/ContactUs'
 import hamburger from '../../assets/hamburger-menu.png'
@@ -72,7 +72,7 @@ function Navbar() {
                     <Router>
                         <nav >
                             <ul id="navbar">
-                                <Link to='/home'><li>Home</li></Link>
+                                <Link to='/'><li>Home</li></Link>
                                 <Link to='/book'><li>Book a car</li></Link>
                                 <Link to='/contactus'><li>Contact Us</li></Link>
                                 <Link to='/aboutus'><li>About Us</li></Link>
@@ -88,7 +88,7 @@ function Navbar() {
                             <img src={hamburger} id = "toggleButton" onClick = {toggleFunction} alt = "salsa"/>
                         </nav>
                         <Switch>
-                            <Route path="/home" exact component={Home} />
+                            <Route path="/" exact component={Home} />
                             <Route path="/book" exact component={Book} />
                             <Route path="/contactus" exact component={Contact} />
                             <Route path="/aboutus" exact component={About} />
