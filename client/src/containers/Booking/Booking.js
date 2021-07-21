@@ -7,7 +7,7 @@ let filteredCars = cars;
 
 function Booking() {
     //variables for all filters
-    const [manufacturer, setManufacturer] = useState('');
+    const [manufacturer, setManufacturer] = useState(''); 
     const [seats, setSeats] = useState('');
     const [carType, setCarType] = useState('');
     const [transmission, setTransmission] = useState('');
