@@ -4,11 +4,11 @@ import {cars} from '../../components/BookCard/data'
 import './DisplayCars.css'
 import NavBar from '../../components/Navbar/Navbar.js'
 import Footer from '../../components/Footer/Footer.js'
-import User from '../../containers/User/Index'
-import { AuthContext } from "../../helpers/AuthContext";
+//import User from '../../containers/User/Index'
+//import { AuthContext } from "../../helpers/AuthContext";
 
 function DisplayCars() {
-    const authState  = useContext(AuthContext);
+    /*const authState  = useContext(AuthContext);
     if(!authState){
         return (
             <>
@@ -17,7 +17,7 @@ function DisplayCars() {
                 <User/>
             </>
         )
-    }
+    }*/
     return (
         <React.Fragment>
             <NavBar/>
