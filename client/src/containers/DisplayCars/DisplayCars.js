@@ -4,27 +4,29 @@ import {cars} from '../../components/BookCard/data'
 import './DisplayCars.css'
 import NavBar from '../../components/Navbar/Navbar.js'
 import Footer from '../../components/Footer/Footer.js'
-import Booking from '../Booking/Booking.js'
-
 import User from '../../containers/User/Index'
 import { AuthContext } from "../../helpers/AuthContext";
 
 function DisplayCars() {
     const authState  = useContext(AuthContext);
-    // if(!authState.status){
-    //     return (
-    //         <>
-    //             <NavBar/>
-    //             <h2>Please login first to continue</h2>
-    //             <User/>
-    //         </>
-    //     )
-    // }
+    if(!authState){
+        return (
+            <>
+                <NavBar/>
+                <h2>Please login first to continue</h2>
+                <User/>
+            </>
+        )
+    }
     return (
         <React.Fragment>
             <NavBar/>
             <div className = 'bookCard-container-container'>
-                <Booking></Booking>
+                {cars.map((car) => {
+                    return (
+                        <BookCard key={car.id} car = {car}/>
+                    )
+                })}
             </div>
             <Footer/>
         </React.Fragment>
